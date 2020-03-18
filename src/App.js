@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import content from './content';
+import RecursiveList from './components/RecursiveList';
+import flatTree from './dataSerializer';
+import IterativeList from './components/IterativeList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Recursive list</h2>
+      <RecursiveList listData={content} />
+      <IterativeList listData={flatTree} />
     </div>
   );
 }
